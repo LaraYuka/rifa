@@ -1,0 +1,83 @@
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card shadow mt-5">
+            <div class="card-header">
+                <div class="card-title">
+                    <div class="row">
+                        <div class="col-12 col-md-10">
+                            <h4 class="text-denger">
+                                Gerenciar Tipos
+                            </h4>
+
+                        </div>
+
+                        <div class="col-12 col-md-2">
+                            <button class="btn btn-danger btn-block btn-new">
+                                <i class="fa-solid fa-circle-plus"></i> Adicionar
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover" id="table-tipo">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col" class="text-center">Id</th>
+                                <th scope="col" class="text-center">NOME</th>
+                                <th scope="col" class="text-center">AçÕES</th>
+                            </tr>
+
+                        </thead>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- JAnela modal para recebimento das funcionalidades do CRUD-->
+<div id="modal-tipo" class="modal fade" tabindex="-1" role="disalo">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="my-modal-title">Title</h5>
+
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+                <p>Content</p>
+
+            </div>
+
+            <div class="modal-footer">
+                <button id="close" class="btn btn-secindary">Fechar</button>
+                <button class="btn btn-success btn-save">Salvar</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Linkagem de todas as funcionalidade jQuery que serão utilizadas em tela-->
+
+<!-- <scripr src="src/tipo/controller/list-tipo.js"></script>-->
+<script src="src/tipo/controler/new-tipo.js"></script>
+<!-- <scripr src="src/tipo/controller/save-tipo.js"></script>-->
+<!-- <scripr src="src/tipo/controller/view-tipo.js"></script>-->
+<!-- <scripr src="src/tipo/controller/edit-tipo.js"></script>-->
