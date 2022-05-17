@@ -11,8 +11,7 @@ $(document).ready(function() {
 
         $('.modal-title').append('Visualização de registros')
 
-        let ID = 'ID=${$(this).attr('
-        id ')}';
+        let ID = "ID=${$(this).attr('id')}";
 
         $.ajax({
             type: 'POST',
@@ -21,14 +20,14 @@ $(document).ready(function() {
             data: ID,
             url: 'src/tipo/modelo/view-tipo.php',
             success: function(dado) {
-                if (dado.tipo == (sucess) {
-                        $('.modal-body').load('src/tipo/visao/form-tipo.html'),
-                            function() {
-                                $('#NOME').val(dado.dados.NOME)
-                                $(#NOME).attr('readonly', 'true')
-                            }) $('.btn-save').hide() $('#modal-tipo').modal('.show')
-                }
-                else {
+                if (dado.tipo == "success") {
+                    $('.modal-body').load('src/tipo/visao/form-tipo.html', function() {
+                        $('#NOME').val(dado.dados.NOME)
+                        $('#NOME').attr('readonly', 'true')
+                    })
+                    $('.btn-save').hide()
+                    $('#modal-tipo').modal('show')
+                } else {
                     Swal.fire({ //Inicialização do SweetAlert
                         title: 'e-Rifa', //Titulo da janela SweetAlert
                         text: dado.mensagem, //Mensagem retomada do microserviço

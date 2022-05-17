@@ -2,10 +2,9 @@ $(document).ready(function() {
 
     $('#table-tipo').on('click', 'button.btn-delete', function(e) {
 
-        e.preventDefault();
+        e.preventDefault()
 
-        let ID = 'ID=${$(this).attr('
-        id ')}'
+        let ID = "ID=${$(this).attr('id')}"
 
         Swal.fire({
             title: 'e-Rifa',
