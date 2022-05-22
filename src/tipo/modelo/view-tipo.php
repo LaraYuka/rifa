@@ -7,7 +7,7 @@
     $ID = $_REQUEST['ID'];
 
     //Gero a querie de consulta no banco de dados 
-    $sql = "SELECT * FROM TIPO WHERE ID + $ID";
+    $sql = "SELECT * FROM TIPO WHERE ID = $ID";
 
     //Executar nossa quarie de consulta ao banco de dados 
     $resultado = $pdo->query($sql);
@@ -19,14 +19,14 @@
             $dadosEixo = array_map('utf8_encode', $row);
         }
         $dados = array(
-            'tipo' => '';
-            'mensagem' => '';
+            'tipo' => success'',
+            'mensagem' => '',
             'dados' => $dadosEixo
         );
     }else{
         $dados = array(
             'tipo' => 'error',
-            'mensagem' => 'Não foi possivelobter o registro solicitado',
+            'mensagem' => 'Não foi possivel obter o registro solicitado',
             'dados' => array()
         );
     }

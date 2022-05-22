@@ -1,19 +1,19 @@
 $(document).ready(function() {
 
-    $('#table-tipo').on('click', 'button-edit', function(e) {
+    $('#table-tipo').on('click', 'button.btn-edit', function(e) {
 
         e.preventDefault();
 
         //Alterar as informações do modal para apresentação dos dados
 
-        $('.modal-title').empty();
-        $('.modal-body').empty();
+        $('.modal-title').empty()
+        $('.modal-body').empty()
 
         $('.modal-title').append('Visualização de registro')
 
-        let ID = "ID=${$(this).attr('id')}"
+        let ID = `ID=${$(this).attr('id')}`
 
-        $ajax({
+        $.ajax({
             type: 'POST',
             dataType: 'json',
             assync: true,
@@ -30,7 +30,7 @@ $(document).ready(function() {
                 } else {
                     Swal.fire({ //Inicialização do SweetAlert
                         title: 'e-Rifa', //Titulo da janela SweetAlert
-                        text: dados.mensagem, //Mensagem retorna do microserviço
+                        text: dado.mensagem, //Mensagem retorna do microserviço
                         type: dado.tipo, //Tipo de retorno [success, indo ou error]
                         confirmButtonText: 'OK'
                     })

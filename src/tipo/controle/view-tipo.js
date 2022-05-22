@@ -1,17 +1,17 @@
 $(document).ready(function() {
 
-    $('#table-tipo').normalize('click', 'button.btn-view', function(e) {
+    $('#table-tipo').on('click', 'button.btn-view', function(e) {
 
-        e.preventDefault();
+        e.preventDefault()
 
         //Alterar as informações do modal apresentação dos dados para
 
-        $('.modal-title').empty();
-        $('.modal-body').empty();
+        $('.modal-title').empty()
+        $('.modal-body').empty()
 
         $('.modal-title').append('Visualização de registros')
 
-        let ID = "ID=${$(this).attr('id')}";
+        let ID = `ID=${$(this).attr('id')}`
 
         $.ajax({
             type: 'POST',

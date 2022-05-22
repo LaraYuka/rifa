@@ -5,7 +5,7 @@ $(document).ready(function() {
 
         let dados = $('#form-tipo').serialize()
 
-        dados += "&operacao=${$('.btn-save ').attr('data-operation')}"
+        dados += `&operacao=${$('.btn-save').attr('data-operation')}`
 
         $.ajax({
             type: 'POST',
@@ -22,7 +22,7 @@ $(document).ready(function() {
                 })
 
                 $('#modal-tipo').modal('hide');
-                $('#table-tipo').DataTable().ajax.ready()
+                $('#table-tipo').DataTable().ajax.reload()
             }
 
         })

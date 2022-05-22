@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         e.preventDefault()
 
-        let ID = "ID=${$(this).attr('id')}"
+        let ID = `ID=${$(this).attr('id')}`
 
         Swal.fire({
             title: 'e-Rifa',
@@ -14,23 +14,26 @@ $(document).ready(function() {
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não'
         }).then((result => {
-            $.ajax({
-                type: 'POST',
-                dataType: 'json',
-                assync: true,
-                data: ID,
-                url: 'src/tipo/modelo/delete-tipo.php',
-                success: function(dados) {
-                    Swal.fire({
-                        title: 'e-Rifa',
-                        text: dados.mensagem,
-                        icon: dados.tipo,
-                        confirmButtonText: 'OK',
-                    })
+            if (result.value) {
 
-                    $('#table-tipo').DataTable().ajax.reload()
-                }
-            })
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    assync: true,
+                    data: ID,
+                    url: 'src/tipo/modelo/delete-tipo.php',
+                    success: function(dados) {
+                        Swal.fire({
+                            title: 'e-Rifa',
+                            text: dados.mensagem,
+                            icon: dados.tipo,
+                            confirmButtonText: 'OK',
+                        })
+
+                        $('#table-tipo').DataTable().ajax.reload()
+                    }
+                })
+            }
         }))
     })
 })
