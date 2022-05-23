@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         $('.modal-title').append('Adicionar novo tipo de acesso')
 
-        $('.modal-body').load('src/tipo/visao/form-tipo.html')
+        //$('.modal-body').load('../visao/form-tipo.html')
 
         $('.btn-save').show()
 
