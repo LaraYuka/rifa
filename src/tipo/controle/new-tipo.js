@@ -3,13 +3,14 @@ $(document).ready(function() {
         e.preventDefault();
 
         $('.modal-title').empty()
-        $('.modal-body').empty()
+
+        //$('.modal-body').empty()
 
         $('.modal-title').append('Adicionar novo tipo de acesso')
 
         $('.modal-body').load('../visao/form-tipo.html')
 
-        $('.modal-body').append('../visao/form-tipo.html')
+        //$('.modal-body').append('../visao/form-tipo.html')
 
         $('.btn-save').show()
 
@@ -17,4 +18,10 @@ $(document).ready(function() {
 
         $('#modal-tipo').modal('show')
     })
+
+    $('.close, #close').click(function(e) {
+        e.preventDefault()
+        $('.#modal-tipo').modal('hide')
+    })
+
 })

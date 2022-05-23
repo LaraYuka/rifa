@@ -22,7 +22,7 @@
         if($operacao == 'insert'){
             //Prepara o comando INSERT para ser executado
             try{
-                $stmt = $pdo->prepare('INSERT INTO TIPO (NOME) VALUES (:a');
+                $stmt = $pdo->prepare('INSERT INTO TIPO (NOME) VALUES (:a)');
                 $stmt->execute(array(
                     ':a' => utf8_decode($requestData['NOME'])
                 ));

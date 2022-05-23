@@ -13,7 +13,7 @@ $(document).ready(function() {
             showCancelButton: true,
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não'
-        }).then((result => {
+        }).then((result) => {
             if (result.value) {
 
                 $.ajax({
@@ -27,13 +27,13 @@ $(document).ready(function() {
                             title: 'e-Rifa',
                             text: dados.mensagem,
                             icon: dados.tipo,
-                            confirmButtonText: 'OK',
+                            confirmButtonText: 'OK'
                         })
 
                         $('#table-tipo').DataTable().ajax.reload()
                     }
                 })
             }
-        }))
+        })
     })
 })

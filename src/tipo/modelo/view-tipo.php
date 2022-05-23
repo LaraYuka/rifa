@@ -19,7 +19,7 @@
             $dadosEixo = array_map('utf8_encode', $row);
         }
         $dados = array(
-            'tipo' => success'',
+            'tipo' => 'success',
             'mensagem' => '',
             'dados' => $dadosEixo
         );

@@ -23,69 +23,71 @@
 
 </body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+<div id="content" class="container mt-5">
 
-    <a class="navbar-brand" href="../../../sistema.html">
-        <img src="../../../img/img5.png" width="55" height="55" class="d-inline-block align-text-top">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-nav" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="../../../sistema.html">
+            <img src="../../../img/img5.png" width="55" height="55" class="d-inline-block align-text-top">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-nav" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
 
-    <div id="my-nav" class="collapse navbar-collapse">
+        <div id="my-nav" class="collapse navbar-collapse">
 
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-house"></i>Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-sack-dollar"></i> Vendendores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-comments-dollar"></i> Compradores</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="src/tipo/visao/list-tipo.html"><i class="fa-solid fa-user-check"></i> Tipos de Acesso</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-receipt"></i>Promoções</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-cart-arrow-down"></i>Prêmio</a>
-            </li>
-        </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-house"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-sack-dollar"></i> Vendendores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-comments-dollar"></i> Compradores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="src/tipo/visao/list-tipo.html"><i class="fa-solid fa-user-check"></i> Tipos de Acesso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-receipt"></i>Promoções</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../../sistema.html"><i class="fa-solid fa-cart-arrow-down"></i>Prêmio</a>
+                </li>
+            </ul>
 
-        <a class="nav-link text-dark" href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema</a>
+            <a class="nav-link text-dark" href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Sair do Sistema</a>
 
-    </div>
+        </div>
 
-</nav>
+    </nav>
 
-<div class="row mt-5">
-    <div class="col-12">
-        <div class="card shadow mt-5">
-            <div class="card-header">
-                <div class="card-title">
-                    <div class="row">
-                        <div class="col-12 col-md-10">
-                            <h4 class="text-denger">
-                                Gerenciar Tipos de Acesso
-                            </h4>
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card shadow mt-5">
+                <div class="card-header">
+                    <div class="card-title">
+                        <div class="row">
+                            <div class="col-12 col-md-10">
+                                <h4 class="text-denger">
+                                    Gerenciar Tipos de Acesso
+                                </h4>
 
-                        </div>
+                            </div>
 
-                        <div class="col-12 col-md-2">
-                            <button class="btn btn-danger btn-block btn-new">
+                            <div class="col-12 col-md-2">
+                                <button class="btn btn-danger btn-block btn-new">
                                 <i class="fa-solid fa-circle-plus"></i> Adicionar
                             </button>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
-
-                <!-- </div> -->
 
                 <div class="card-body">
                     <div class="table-responsive">
@@ -103,40 +105,41 @@
                     </div>
 
                 </div>
+                <!-- </div> -->
             </div>
         </div>
+
     </div>
 
-</div>
+    <!-- JAnela modal para recebimento das funcionalidades do CRUD-->
+    <div id="modal-tipo" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="my-modal-title">Title</h5>
 
-<!-- JAnela modal para recebimento das funcionalidades do CRUD-->
-<div id="modal-tipo" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="my-modal-title">Title</h5>
-
-                <button class="close" aria-label="Close">
+                    <button class="close" aria-label="Close" data-dismiss="modal">
                     <span aria-hidden="true">&times;</span>
                 </button>
 
-            </div>
+                </div>
 
-            <div class="modal-body">
-                <p>Content</p>
+                <div class="modal-body">
+                    <p>Content</p>
 
-            </div>
+                </div>
 
-            <div class="modal-footer">
-                <button id="close" class="btn btn-secondary"><i class="bx bxs-x-circle"></i>Fechar</button>
-                <button class="btn btn-success btn-save"><i class="bx bxs-save"></i> Salvar</button>
+                <div class="modal-footer">
+                    <button id="close" class="btn btn-secondary"><i class="bx bxs-x-circle"></i>Fechar</button>
+                    <button class="btn btn-success btn-save"><i class="bx bxs-save"></i> Salvar</button>
+
+                </div>
 
             </div>
 
         </div>
 
     </div>
-
 </div>
 
 <!-- Linkagem de todas as funcionalidade jQuery que serão utilizadas em tela-->

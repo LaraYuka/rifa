@@ -7,7 +7,7 @@
     $ID = $_REQUEST['ID'];
 
     //Criar a nossa querie para interação com o BD
-    $sql = "DELETE FROM TIPO WHERE ID = $ID";
+    $sql = "DELETE * FROM TIPO WHERE ID = $ID";
 
     //Executar a nossa querie 
     $resultado = $pdo->query($sql);
