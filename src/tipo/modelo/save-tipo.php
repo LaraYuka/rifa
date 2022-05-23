@@ -33,7 +33,7 @@
             } catch(PDOException $e){
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possivel efetuar o cadastrado.'
+                    "mensagem" => 'Não foi possivel efetuar o cadastrar'
                 );
             }
         }else{

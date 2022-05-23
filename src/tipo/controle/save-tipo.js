@@ -5,14 +5,15 @@ $(document).ready(function() {
 
         let dados = $('#form-tipo').serialize()
 
-        dados += `&operacao=${$('.btn-save').attr('data-operation')}`
+        //dados += `&operacao=${$('.btn-save').attr('data-operation')}`
+        dados += operacao = $('.btn-save').attr('data-operation')
 
         $.ajax({
             type: 'POST',
             dataType: 'json',
             assync: true,
             data: dados,
-            url: '../modelo/save-tipo.php',
+            url: 'src/tipo/modelo/save-tipo.php',
             success: function(dados) {
                 Swal.fire({
                     title: 'e-Rifa',

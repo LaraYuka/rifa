@@ -11,7 +11,8 @@ $(document).ready(function() {
 
         $('.modal-title').append('Visualização de registros')
 
-        let ID = `ID=${$(this).attr('id')}`
+        //let ID = `ID=${$(this).attr('id')}`
+        let ID = $(this).attr('id')
 
         $.ajax({
             type: 'POST',

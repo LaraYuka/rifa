@@ -9,6 +9,8 @@ $(document).ready(function() {
 
         $('.modal-body').load('../visao/form-tipo.html')
 
+        $('.modal-body').append('../visao/form-tipo.html')
+
         $('.btn-save').show()
 
         $('.btn-save').attr('data-operation', 'insert')
