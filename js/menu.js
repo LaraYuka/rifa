@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 //Drop Menu
 
-
+/** 
 $(document).ready(function() {
     $('.dropdown-submenu a.test').on("click", function(e) {
         $(this).next('ul').toggle();
@@ -85,4 +85,4 @@ $(document).ready(function() {
         $('p').addClass('text-dark')
     })
 
-})
+}) */
