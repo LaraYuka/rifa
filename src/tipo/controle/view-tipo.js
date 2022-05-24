@@ -20,10 +20,10 @@ $(document).ready(function() {
             dataType: 'json',
             assync: true,
             data: ID,
-            url: '../modelo/view-tipo.php',
+            url: 'src/tipo/modelo/view-tipo.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
-                    $('.modal-body').load('../visao/form-tipo.html', function() {
+                    $('.modal-body').load('src/tipo/visao/form-tipo.html', function() {
                         $('#NOME').val(dado.dados.NOME)
                         $('#NOME').attr('readonly', 'true')
                     })

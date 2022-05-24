@@ -3,18 +3,18 @@ $(document).ready(function() {
         "processing": true,
         "serverSide": true,
         "ajax": {
-            "url": "../modelo/list-tipo.php",
+            "url": "src/tipo/modelo/list-tipo.php",
             "type": "POST"
         },
         "language": {
-            "url": "../../../libs/DataTables/pt_br.json"
+            "url": "libs/DataTables/pt_br.json"
         },
         "columns": [{
                 "data": 'ID',
                 "className": 'text-center'
             },
             {
-                "data": 'Nome',
+                "data": 'NOME',
                 "className": 'text-center'
             },
             {
