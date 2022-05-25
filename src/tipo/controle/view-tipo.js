@@ -4,16 +4,14 @@ $(document).ready(function() {
 
         e.preventDefault()
 
-        //Alterar as informações do modal apresentação dos dados para
+        // Alterar as informações do modal para apresentação dos dados
 
         $('.modal-title').empty()
         $('.modal-body').empty()
 
-        $('.modal-title').append('Visualização de registros')
+        $('.modal-title').append('Visualização de registro')
 
         let ID = `ID=${$(this).attr('id')}`
-
-        //let ID = $(this).attr('id')
 
         $.ajax({
             type: 'POST',
@@ -30,14 +28,15 @@ $(document).ready(function() {
                     $('.btn-save').hide()
                     $('#modal-tipo').modal('show')
                 } else {
-                    Swal.fire({ //Inicialização do SweetAlert
-                        title: 'e-Rifa', //Titulo da janela SweetAlert
-                        text: dado.mensagem, //Mensagem retomada do microserviço
-                        type: dado.tipo, //tipo de retorno [success, info ou error]
+                    Swal.fire({ // Inicialização do SweetAlert
+                        title: 'e-Rifa', // Título da janela SweetAler
+                        text: dado.mensagem, // Mensagem retornada do microserviço
+                        type: dado.tipo, // Tipo de retorno [success, info ou error]
                         confirmButtonText: 'OK'
                     })
                 }
             }
         })
+
     })
 })

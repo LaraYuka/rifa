@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     $('#table-tipo').on('click', 'button.btn-edit', function(e) {
 
-        e.preventDefault();
+        e.preventDefault()
 
-        //Alterar as informações do modal para apresentação dos dados
+        // Alterar as informações do modal para apresentação dos dados
 
         $('.modal-title').empty()
         $('.modal-body').empty()
@@ -29,14 +29,15 @@ $(document).ready(function() {
                     $('.btn-save').show()
                     $('#modal-tipo').modal('show')
                 } else {
-                    Swal.fire({ //Inicialização do SweetAlert
-                        title: 'e-Rifa', //Titulo da janela SweetAlert
-                        text: dado.mensagem, //Mensagem retorna do microserviço
-                        type: dado.tipo, //Tipo de retorno [success, indo ou error]
+                    Swal.fire({ // Inicialização do SweetAlert
+                        title: 'e-Rifa', // Título da janela SweetAler
+                        text: dado.mensagem, // Mensagem retornada do microserviço
+                        type: dado.tipo, // Tipo de retorno [success, info ou error]
                         confirmButtonText: 'OK'
                     })
                 }
             }
         })
+
     })
 })

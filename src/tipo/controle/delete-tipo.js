@@ -13,7 +13,7 @@ $(document).ready(function() {
             showCancelButton: true,
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não'
-        }).then((result) => {
+        }).then((result => {
             if (result.value) {
 
                 $.ajax({
@@ -34,6 +34,6 @@ $(document).ready(function() {
                     }
                 })
             }
-        })
+        }))
     })
 })

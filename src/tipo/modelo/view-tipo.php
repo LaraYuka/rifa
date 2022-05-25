@@ -1,18 +1,18 @@
-<?php 
+<?php
 
-    //Inclusão do banco de dados 
-    include("../../conexao/conn.php");
+    // Inclusão do banco de dados
+    include('../../conexao/conn.php');
 
-    //Execução a recepcão do id a ser buscados no banco de dados
+    // Executo a recepção do id a ser buscado no banco de dados
     $ID = $_REQUEST['ID'];
 
-    //Gero a querie de consulta no banco de dados 
+    // Gero a querie de consulta no banco de dados
     $sql = "SELECT * FROM TIPO WHERE ID = $ID";
 
-    //Executar nossa quarie de consulta ao banco de dados 
+    // Executar nossa querie de consulta ao banco de dados
     $resultado = $pdo->query($sql);
 
-    //Testar a minha consulta de BD
+    // Testar a minha consulta de banco de dados
     if($resultado){
         $dadosEixo = array();
         while($row = $resultado->fetch(PDO::FETCH_ASSOC)){
@@ -23,10 +23,10 @@
             'mensagem' => '',
             'dados' => $dadosEixo
         );
-    }else{
+    } else {
         $dados = array(
             'tipo' => 'error',
-            'mensagem' => 'Não foi possivel obter o registro solicitado',
+            'mensagem' => 'Não foi possível obter o registro solicitado.',
             'dados' => array()
         );
     }
